@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head th:replace="index::headstuff">
+    <meta charset="UTF-8"/>
+    <title>TransactionHistory</title>
+</head>
+<body>
+<div th:replace="fragments/mainpage::navclass">This page has a navbar</div>
+<a href="/">Show All Accounts</a><br/>
+AccountNumber:<span th:text="${transaction.accNo}"></span><br/>
+Action:<span th:text="${transaction.action}"></span><br/>
+Amount:<span th:text="${transaction.amount}"></span><br/>
+Reason:<span th:text="${transaction.reason}"></span><br/>
+
+
+
+</body>
+</html>

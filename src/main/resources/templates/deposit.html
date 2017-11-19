@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Deposit</title>
+</head>
+<body>
+
+<form action="#" th:action="@{/depositprocess}" th:object="${transaction}" method="post">
+
+    <input type="hidden" th:field="*{id}"/>
+
+    AccountNumber:<input type="text" th:field="*{accNo}"/>
+    <span th:if="${#fields.hasErrors('accNo')}" th:errors="*{accNo}"></span><br/>
+
+
+</form>
+
+</body>
+</html>
